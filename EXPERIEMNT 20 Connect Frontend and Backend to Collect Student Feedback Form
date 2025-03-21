@@ -1,0 +1,10 @@
+Protected Sub btnSubmit_Click(sender As Object, e As EventArgs)
+    Dim conn As New SqlConnection("your_connection_string")
+    Dim cmd As New SqlCommand("INSERT INTO Feedback (Name, Feedback) VALUES (@Name, @Feedback)", conn)
+    cmd.Parameters.AddWithValue("@Name", txtName.Text)
+    cmd.Parameters.AddWithValue("@Feedback", txtFeedback.Text)
+    conn.Open()
+    cmd.ExecuteNonQuery()
+    conn.Close()
+    Response.Write("Feedback Submitted!")
+End Sub
