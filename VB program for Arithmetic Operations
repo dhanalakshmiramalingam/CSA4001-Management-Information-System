@@ -1,0 +1,29 @@
+Public Class ArithmeticOperations
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim num1 As Double = Val(txtNum1.Text)
+        Dim num2 As Double = Val(txtNum2.Text)
+        lblResult.Text = "Sum: " & (num1 + num2)
+    End Sub
+
+    Private Sub btnSubtract_Click(sender As Object, e As EventArgs) Handles btnSubtract.Click
+        Dim num1 As Double = Val(txtNum1.Text)
+        Dim num2 As Double = Val(txtNum2.Text)
+        lblResult.Text = "Difference: " & (num1 - num2)
+    End Sub
+
+    Private Sub btnMultiply_Click(sender As Object, e As EventArgs) Handles btnMultiply.Click
+        Dim num1 As Double = Val(txtNum1.Text)
+        Dim num2 As Double = Val(txtNum2.Text)
+        lblResult.Text = "Product: " & (num1 * num2)
+    End Sub
+
+    Private Sub btnDivide_Click(sender As Object, e As EventArgs) Handles btnDivide.Click
+        Dim num1 As Double = Val(txtNum1.Text)
+        Dim num2 As Double = Val(txtNum2.Text)
+        If num2 = 0 Then
+            lblResult.Text = "Error: Cannot divide by zero!"
+        Else
+            lblResult.Text = "Quotient: " & (num1 / num2)
+        End If
+    End Sub
+End Class
