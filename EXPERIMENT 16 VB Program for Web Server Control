@@ -1,0 +1,7 @@
+Button Control
+<asp:Button ID="btnSubmit" runat="server" Text="Click Me" OnClick="btnSubmit_Click" />
+
+server-side VB code
+Protected Sub btnSubmit_Click(sender As Object, e As EventArgs)
+    Response.Write("Button clicked!")
+End Sub
