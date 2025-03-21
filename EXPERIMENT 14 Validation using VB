@@ -1,0 +1,17 @@
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text.Trim() = "" Then
+            MsgBox("Name Cannot be Empty", MsgBoxStyle.Critical)
+            Exit Sub
+
+        End If
+
+        If Not IsNumeric(TextBox2.Text) OrElse CInt(TextBox2.Text) <= 0 Then
+            MsgBox("Enter a valid Age", MsgBoxStyle.Critical)
+            Exit Sub
+        End If
+
+        Label3.Text = "Hello " & TextBox1.Text & " , your age is " & TextBox2.Text
+
+    End Sub
+End Class
